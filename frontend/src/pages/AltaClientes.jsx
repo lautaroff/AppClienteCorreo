@@ -104,7 +104,13 @@ export default function AltaClientes() {
         </form>
 
         {respuesta && (
-          <Notification type={respuesta.toLowerCase().includes('error') || respuesta.toLowerCase().includes('completa') ? 'error' : respuesta.toLowerCase().includes('guardando') ? 'info' : 'success'}>
+          <Notification type={
+            respuesta.toLowerCase().includes('error') || 
+            respuesta.toLowerCase().includes('completa') ||
+            respuesta.toLowerCase().includes('existe un cliente') ? 'error' : 
+            respuesta.toLowerCase().includes('guardando') ? 'info' : 
+            'success'
+          }>
             {respuesta}
           </Notification>
         )}

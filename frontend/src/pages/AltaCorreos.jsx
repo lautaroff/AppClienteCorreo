@@ -102,7 +102,15 @@ export default function AltaCorreos() {
         </form>
 
         {respuesta && (
-          <Notification type={respuesta.toLowerCase().includes('error') || respuesta.toLowerCase().includes('completa') || respuesta.toLowerCase().includes('válido') ? 'error' : respuesta.toLowerCase().includes('guardando') ? 'info' : 'success'}>
+          <Notification type={
+            respuesta.toLowerCase().includes('error') || 
+            respuesta.toLowerCase().includes('completa') || 
+            respuesta.toLowerCase().includes('válido') ||
+            respuesta.toLowerCase().includes('no existe') ||
+            respuesta.toLowerCase().includes('no se ha') ? 'error' : 
+            respuesta.toLowerCase().includes('guardando') ? 'info' : 
+            'success'
+          }>
             {respuesta}
           </Notification>
         )}
