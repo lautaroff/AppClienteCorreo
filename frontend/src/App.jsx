@@ -21,7 +21,7 @@ export default function App() {
 
         <footer className="footer">
           <div>
-            Hecho con <span style={{ color: 'var(--danger)' }}>❤️</span> usando React + Spring Boot
+            Sistema de Gestión de Clientes y Correos
           </div>
         </footer>
       </div>
